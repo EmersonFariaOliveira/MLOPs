@@ -11,7 +11,7 @@ RUN mkdir -p /myServer
 RUN mkdir -p /Log
 
 # Copia todo o conteúdo para o diretório Base
-COPY ./cognitive_env /myServer
+COPY . /myServer
 
 # Determina qual o diretório "padrão" do contêiner quando o mesmo iniciar
 WORKDIR /myServer
