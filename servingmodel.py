@@ -37,10 +37,10 @@ def call_predict(request = request):
     if campos.shape[0] == 0:
         return "Dados de chamada da API estão incorretos.", 400
 
-    for col in modelo.independentcols:
+    for col in modelo.feature_names_in_:
         if col not in campos.columns:
             campos[col] = 0
-    x = campos[modelo.independentcols]
+    x = campos[modelo.feature_names_in_]
 
     prediction = modelo.predict(x)
 
@@ -55,7 +55,7 @@ def call_predict(request = request):
 if __name__ == '__main__':
     args = sys.argv[1:]
     if len(args) < 1:
-        args.append('models/modelo01.joblib')
+        args.append('./models/model1.joblib')
     if len(args) < 2:
         args.append('8080')
 

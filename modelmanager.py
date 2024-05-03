@@ -89,7 +89,7 @@ def download():
 if __name__ == '__main__':
     args = sys.argv[1:]
     if len(args) < 1:
-        args.append('8080')
+        args.append('80')
     print(args)
 
     app.run(port=args[0], host='0.0.0.0')
