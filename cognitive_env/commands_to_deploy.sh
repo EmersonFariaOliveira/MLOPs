@@ -10,7 +10,7 @@ sudo docker network create plat_network
 
 sudo docker run -d --network plat_network -p 10001:8080 --restart always --name serving01 platserver python servingmodel.py ./models/model1.joblib 8080
 
-sudo docker run -d --network plat_network -p 10002:8080 --restart always --name serving02 platserver python servingmodel.py models/modelo02.joblib 8080
+sudo docker run -d --network plat_network -p 10002:8080 --restart always --name serving02 platserver python servingmodel_fake.py models/modelo02.joblib 8080
 
 bash geraconfig.sh
 
