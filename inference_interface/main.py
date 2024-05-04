@@ -41,9 +41,9 @@ def call_model_manager(model,loan_amount,term,property_value,income,Credit_Score
     ]
     
     if model == "Propensão à inadimplência":
-        model = "modelo02"
-    else:
         model = "modelo01"
+    else:
+        model = "modelo02"
 
     params={
         "model":model,
