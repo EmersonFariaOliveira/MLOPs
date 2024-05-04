@@ -17,7 +17,7 @@ WORKDIR /interface
 
 # Instala pacotes Python
 RUN pip install --upgrade pip
-RUN pip install -r /requirements.txt
+RUN pip install -r /interface/requirements.txt
 
 # Expõe para o HOST algumas portas, por padrão
 EXPOSE 7860
