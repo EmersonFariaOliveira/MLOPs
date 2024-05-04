@@ -20,4 +20,5 @@ RUN pip install --upgrade pip
 RUN pip install -r /interface/requirements.txt
 
 # Expõe para o HOST algumas portas, por padrão
+EXPOSE 80
 EXPOSE 7860
