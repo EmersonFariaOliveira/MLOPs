@@ -28,8 +28,6 @@ def main():
                 with gr.Column():
                     output = gr.JSON(label="Model Output")
 
-    
-            
             submit_button = gr.Button("Build Sentence")
 
             submit_button.click(
